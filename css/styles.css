@@ -1,0 +1,57 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1e1e1e; /* Dark header */
+}
+
+.parallax {
+    background-image: url(../Images/cover/Wreck_Studios_Cover.jpeg) ; /* Parallax background image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-grey {
+    background-color: #2a2a2a; /* Grey background for sections */
+}
+
+h2, h3 {
+    color: #4eb63486; /* Yellow text for headings */
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+footer {
+    background-color: #1e1e1e; /* Dark footer */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .parallax {
+        height: 80vh; /* Reduce height on smaller screens */
+    }
+
+    h2 {
+        font-size: 2rem; /* Smaller headings on mobile */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Smaller subheadings on mobile */
+    }
+}
