@@ -21,6 +21,9 @@ body {
     z-index: 1000;
     width: 90%;
     max-width: 1200px;
+    border: 2px solid #00ffff; /* Neon cyan border around logo */
+    box-shadow: 0 0 10px #00ffff;
+    border-radius: 50%;
 }
 
 /* Navbar Links */
@@ -40,6 +43,7 @@ body {
 .capsule-navbar .nav-link.active {
     color: #00ffff; /* Neon cyan */
     font-weight: 600;
+    
 }
 
 /* Navbar Brand */
