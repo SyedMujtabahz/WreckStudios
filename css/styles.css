@@ -11,6 +11,7 @@ header {
 
 .parallax {
     background-image: url(../Images/cover/Wreck_Studios_Cover.jpeg) ; /* Parallax background image */
+    opacity: 45%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
