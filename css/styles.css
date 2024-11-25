@@ -1,58 +1,239 @@
+/* General Styles */
 body {
-    background-color: #121212; /* Dark background */
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
     color: #ffffff;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    line-height: 1.6;
 }
 
-header {
-    background-color: #1e1e1e; /* Dark header */
+/* Capsule Navbar Styles */
+.capsule-navbar {
+    background: rgba(33, 78, 76, 0.8); /* Translucent black background */
+    border-radius: 50px; /* Capsule shape */
+    padding: 10px 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 1200px;
 }
 
-.parallax {
-    background-image: url(../Images/cover/Wreck_Studios_Cover.jpeg) ; /* Parallax background image */
-    opacity: 45%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Navbar Links */
+.capsule-navbar .nav-link {
+    color: #ffffff;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.bg-grey {
-    background-color: #2a2a2a; /* Grey background for sections */
+.capsule-navbar .nav-link:hover {
+    color: #ff7f00; /* Neon orange */
 }
 
-h2, h3 {
-    color: #4eb63486; /* Yellow text for headings */
+.capsule-navbar .nav-link.active {
+    color: #00ffff; /* Neon cyan */
+    font-weight: 600;
+}
+
+/* Navbar Brand */
+.capsule-navbar .navbar-brand img {
+    border: 2px solid #00ffff; /* Neon cyan border around logo */
+    box-shadow: 0 0 10px #00ffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.capsule-navbar .navbar-brand img:hover {
+    transform: scale(1.1); /* Slight hover zoom */
+}
+
+/* Video Background */
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#home .container {
+    position: relative;
+    z-index: 1;
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Prevents video from spilling out */
+}
+
+/* Optional Gradient Overlay for Video */
+#home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay */
+    z-index: 0;
+}
+
+/* Neon Text Styles */
+.neon-text {
+    color: #00ffff; /* Neon cyan */
+    text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+
+.neon-orange {
+    color: #ff7f00; /* Neon orange */
+    text-shadow: 0 0 5px #ff7f00, 0 0 15px #ff7f00, 0 0 30px #ff7f00;
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Services Section */
+/* Services Section Styling */
+#services {
+    padding: 60px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff7f00; /* Neon orange */
+    text-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00;
 }
 
 .card {
-    transition: transform 0.3s;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ffff; /* Neon cyan border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.card:hover {
-    transform: scale(1.05); /* Scale up on hover */
+.card-title {
+    color: #ff7f00; /* Neon orange */
+    text-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00;
 }
 
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-neon {
+    background-color: #00ffff;
+    color: #000;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+    background-color: #ff7f00; /* Neon orange */
+    color: #fff;
+    box-shadow: 0 0 15px #ff7f00, 0 0 30px #ff7f00;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ffff; /* Neon cyan */
+    color: #fff;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+
+
+/* Contact Us Section */
+#contact {
+    padding: 60px 0;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    border: 2px solid #00ffff; /* Neon cyan */
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ff7f00; /* Neon orange */
+    box-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00;
+}
+
+.btn-submit {
+    background-color: #00ffff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+.btn-submit:hover {
+    background-color: #ff7f00; /* Neon orange */
+    color: #fff;
+    box-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00;
+}
+
+/* Footer */
 footer {
-    background-color: #1e1e1e; /* Dark footer */
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #00ffff; /* Neon cyan */
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ff7f00;
 }
 
-/* Responsive styling */
+footer p {
+    margin: 0;
+    font-size: 14px;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        padding: 1rem;
+    .capsule-navbar {
+        padding: 10px 20px;
     }
 
-    .parallax {
-        height: 80vh; /* Reduce height on smaller screens */
+    .capsule-navbar .nav-link {
+        font-size: 12px;
+        margin: 0 10px;
     }
 
-    h2 {
-        font-size: 2rem; /* Smaller headings on mobile */
-    }
-
-    h3 {
-        font-size: 1.5rem; /* Smaller subheadings on mobile */
+    #about, #services, #contact {
+        padding: 40px 0;
     }
 }
