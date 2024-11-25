@@ -40,6 +40,7 @@ body {
 .capsule-navbar .nav-link.active {
     color: #00ffff; /* Neon cyan */
     font-weight: 600;
+    
 }
 
 /* Navbar Brand */
